@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+:root {
+    --baggrund: #4c4c4c;
+    --tekst1: #ffffff;
+    --tekst2: #000000;
+    --overskrift: #a08966;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--baggrund);
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* header */
+
+.header {
+    width: 100%;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #4c4c4c;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: var(--overskrift);
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu ikon */
+
+.header .menu-ikon {
+    cursor: pointer;
+    float: right;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-right: 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-ikon .nav-ikon {
+    background: var(--tekst1);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-ikon .nav-ikon:before,
+.header .menu-ikon .nav-ikon:after {
+    background: var(--tekst1);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-ikon .nav-ikon:before {
+    top: 5px;
+}
+
+.header .menu-ikon .nav-ikon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-ikon .nav-ikon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-ikon .nav-ikon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-ikon .nav-ikon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+footer{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    color: var(--tekst1);
+}
+
+@media (min-width: 750px) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-ikon {
+        display: none;
+    }
+
+}
+
+.infographic{
+    color: var(--tekst1);
+    text-align: center;
+    padding:10px;
+}
+
+.hvaderderi{
+    font-size: 30px;
+    color: var(--overskrift);
+}
+
+.overskrift1{
+    padding-top:15%;
+}
+
+.overskrift {
+    color: var(--overskrift);
+    text-align: center;
+
+}
+
+.produkterflex1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.produktergrid {
+    display: none;
+}
+
+/* MENU DONE */
+
+figure.produkt1 {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+figure.produkt2 {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+figure.produkt3 {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+}
+
+.konkurrenceflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: var(--tekst1);
+    padding-left:5%;
+    padding-right:5%;
+
+}
+.overskriftoriginal{
+    font-size:0px;
+}
+
+.button {
+    background-color: var(--overskrift);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.konkurrencegrid {
+    display: none;
+}
+
+.bulowgrid {
+
+    display: none;
+}
+
+.caption {
+    padding-top: 5%;
+    display: block;
+    color: var(--overskrift);
+    font-size: 1.5em;
+
+}
+
+.caption2 {
+    padding-top: 5%;
+    display: block;
+    color: var(--overskrift);
+    font-size: 1.5em;
+
+}
+
+.caption3 {
+    padding-top: 5%;
+    display: block;
+    color: var(--overskrift);
+    font-size: 1.5em;
+
+}
+
+.bulowtekst {
+    margin: 50px;
+    color: var(--tekst1);
+    line-height: 2;
+}
+
+@media (min-width: 600px) {
+ .infographicbillede{
+        width:80%;
+    }
+    .billede7 {
+        width: 70%;
+    }
+
+    .bulowtekst {
+        margin: 100px;
+        line-height: 2;
+    }
+
+    .billede1 {
+        width: 0px;
+    }
+
+    .billede2 {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .overskrift {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 1050px) {
+    .header .logo {
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        padding-right: 0px;
+    }
+
+    .billede2 {
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    .overskrift {
+        font-size: 1.6em;
+    }
+
+    .produkterflex1 {
+        display: none;
+    }
+
+    .produktergrid {
+
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .konkurrence {
+        display: none;
+    }
+
+    .konkurrencegrid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        text-align: center;
+    }
+
+    .konkurrencebillede {
+        grid-column: 1/9;
+        grid-row: 1/12;
+    }
+    
+    .originalbillede{
+        grid-column: 2/6;
+        grid-row:2/12;
+    }
+    
+    .originaltekst{
+         grid-column: 8/12;
+        grid-row: 1/12;
+        color: var(--tekst1);
+        text-align: start;
+        font-size:1.3em;
+    }
+
+    .konkurrencetekst {
+        grid-column: 9/12;
+        grid-row: 3/12;
+        color: var(--tekst1);
+        text-align: start;
+
+    }
+    
+
+    .overskriftkonkurrence {
+        grid-column: 9/12;
+        grid-row: 1/3;
+        color: var(--overskrift);
+        font-size: 1.9em;
+    }
+    
+    .overskriftoriginal{
+    font-size:20px;
+        text-align: center;
+        padding-top:30px;
+}
+
+    .bulowgrid {
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat 1fr 1fr 1fr 1fr;
+        text-align: center;
+        padding-top: 10%;
+
+    }
+    .infographicbillede{
+        width:60%;
+    }
+    }
+
